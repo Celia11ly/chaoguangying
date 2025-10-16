@@ -1,0 +1,92 @@
+/* Slide1 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes pulse-line {
+    0% { transform: scaleX(0); transform-origin: left; }
+    50% { transform: scaleX(1); transform-origin: left; }
+    51% { transform: scaleX(1); transform-origin: right; }
+    100% { transform: scaleX(0); transform-origin: right; }
+}
+.animate-pulse-line {
+    animation: pulse-line 4s linear infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.4), 0 0 10px 0px rgba(59, 130, 246, 0.2); }
+  50% { box-shadow: 0 0 15px 3px rgba(59, 130, 246, 0.6), 0 0 25px 5px rgba(59, 130, 246, 0.4); }
+}
+.animate-pulse-border {
+  animation: pulse-border 3s ease-in-out infinite;
+}
+
+/* Slide2 Animations */
+@keyframes progressBar {
+    from { transform: scaleX(0); transform-origin: left; }
+    to { transform: scaleX(1); transform-origin: left; }
+}
+.animate-progress-bar {
+    animation: progressBar 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes video-progress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+.animate-video-progress {
+    animation: video-progress 2.5s linear forwards;
+}
+
+@keyframes flow-light-curve {
+  from { stroke-dashoffset: var(--path-length); }
+  to { stroke-dashoffset: calc(-1 * var(--beam-length)); }
+}
+.animate-light-flow {
+  --beam-length: 250;
+  stroke-dasharray: var(--beam-length) var(--path-length);
+  animation: flow-light-curve 8s linear infinite;
+}
+
+@keyframes pulse-border-blue {
+  0%, 100% { 
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 8px 0px rgba(59, 130, 246, 0.4), 0 0 12px 0px rgba(59, 130, 246, 0.3);
+  }
+  50% { 
+    border-color: rgba(96, 165, 250, 0.8);
+    box-shadow: 0 0 16px 4px rgba(59, 130, 246, 0.6), 0 0 30px 6px rgba(59, 130, 246, 0.4);
+  }
+}
+.animate-pulse-border-blue {
+  animation: pulse-border-blue 3s ease-in-out infinite;
+}
+
+/* Slide4 Animations */
+@keyframes fadeInLate {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in-late {
+  animation: fadeInLate 0.5s ease-in-out 1s forwards;
+}
+
+/* Slide5 Animations */
+@keyframes pulse-border-cyan {
+  0%, 100% { 
+    box-shadow: 0 0 8px 0px rgba(34, 211, 238, 0.4), 0 0 12px 0px rgba(14, 165, 233, 0.3); 
+    border-color: rgba(34, 211, 238, 0.5);
+  }
+  50% { 
+    box-shadow: 0 0 16px 4px rgba(34, 211, 238, 0.6), 0 0 30px 6px rgba(14, 165, 233, 0.4); 
+    border-color: rgba(56, 189, 248, 0.8);
+  }
+}
+.animate-pulse-border-cyan {
+  border: 1px solid transparent;
+  animation: pulse-border-cyan 3s ease-in-out infinite;
+}

@@ -166,35 +166,3 @@ const Slide4: React.FC = () => {
 
 export default Slide4;
 
-const animationStyles = `
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-  animation: fadeIn 0.7s ease-in-out forwards;
-}
-@keyframes fadeInLate {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.animate-fade-in-late {
-  animation: fadeInLate 0.5s ease-in-out 1s forwards;
-}
-@keyframes progressBar {
-    from { transform: scaleX(0); transform-origin: left; }
-    to { transform: scaleX(1); transform-origin: left; }
-}
-.animate-progress-bar {
-    animation: progressBar 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-</style>
-`;
-
-if (!document.querySelector('#slide4-animation-styles')) {
-    const styleElement = document.createElement('style');
-    styleElement.id = 'slide4-animation-styles';
-    styleElement.innerHTML = animationStyles;
-    document.head.appendChild(styleElement);
-}

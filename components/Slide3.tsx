@@ -203,30 +203,3 @@ const Slide3: React.FC = () => {
 
 export default Slide3;
 
-const animationStyles = `
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-  animation: fadeIn 0.7s ease-in-out forwards;
-}
-@keyframes pulse-line {
-    0% { transform: scaleX(0); transform-origin: left; }
-    50% { transform: scaleX(1); transform-origin: left; }
-    51% { transform: scaleX(1); transform-origin: right; }
-    100% { transform: scaleX(0); transform-origin: right; }
-}
-.animate-pulse-line {
-    animation: pulse-line 4s linear infinite;
-}
-</style>
-`;
-
-if (!document.querySelector('#slide3-animation-styles')) {
-    const styleElement = document.createElement('style');
-    styleElement.id = 'slide3-animation-styles';
-    styleElement.innerHTML = animationStyles;
-    document.head.appendChild(styleElement);
-}

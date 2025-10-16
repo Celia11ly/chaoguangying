@@ -109,35 +109,3 @@ const Slide5: React.FC = () => {
 
 export default Slide5;
 
-const animationStyles = `
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-  animation: fadeIn 0.7s ease-in-out forwards;
-}
-@keyframes pulse-border {
-  0%, 100% { 
-    box-shadow: 0 0 8px 0px rgba(34, 211, 238, 0.4), 0 0 12px 0px rgba(14, 165, 233, 0.3); 
-    border-color: rgba(34, 211, 238, 0.5);
-  }
-  50% { 
-    box-shadow: 0 0 16px 4px rgba(34, 211, 238, 0.6), 0 0 30px 6px rgba(14, 165, 233, 0.4); 
-    border-color: rgba(56, 189, 248, 0.8);
-  }
-}
-.animate-pulse-border {
-  border: 1px solid transparent;
-  animation: pulse-border 3s ease-in-out infinite;
-}
-</style>
-`;
-
-if (!document.querySelector('#slide5-animation-styles')) {
-    const styleElement = document.createElement('style');
-    styleElement.id = 'slide5-animation-styles';
-    styleElement.innerHTML = animationStyles;
-    document.head.appendChild(styleElement);
-}
