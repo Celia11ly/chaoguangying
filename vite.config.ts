@@ -21,8 +21,9 @@ export default defineConfig(({ mode }) => {
         }
       },
       build: {
-        outDir: 'dist',
-        sourcemap: false
+        outDir: '.',
+        sourcemap: false,
+        emptyOutDir: false
       }
     };
 });
